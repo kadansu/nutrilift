@@ -1,0 +1,383 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #1a1a1a; /* Dark background */
+    color: #fff;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Navbar */
+header {
+    background-color: #2d2d2d;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #ffb300; /* Yellow accent */
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: #ff9800; /* Orange accent */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffb300;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #ffb300;
+    color: #1a1a1a;
+}
+
+.btn-primary:hover {
+    background-color: #ff9800;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 179, 0, 0.5);
+}
+
+.btn-secondary {
+    background-color: #666;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.btn-delete {
+    background-color: #ff4444;
+    color: #fff;
+}
+
+.btn-delete:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.7)), url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    color: #fff;
+    padding: 5rem 0;
+    text-align: center;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #ffb300;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 2px solid #ffb300;
+    border-radius: 5px;
+    background-color: #2d2d2d;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #ff9800;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+}
+
+.form-flex {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.form-flex .form-group {
+    flex: 1;
+}
+
+.signup-form,
+.login-form,
+.edit-form {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #2d2d2d;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ffb300;
+}
+
+.signup-form h2,
+.login-form h2,
+.edit-form h2 {
+    color: #ffb300;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.success-message {
+    color: #ffb300;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.error-message {
+    color: #ff4444;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Profile Picture */
+.profile-container {
+    max-width: 600px;
+    margin: 3rem auto;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #ffb300;
+}
+
+.profile-icon {
+    font-size: 150px;
+    color: #ffb300;
+    margin-bottom: 1rem;
+}
+
+/* Meal Plans, Shopping List, and Progress */
+.meal-plans-grid,
+.shopping-list-grid,
+.progress-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.meal-plan-card,
+.shopping-item,
+.progress-entry {
+    background-color: #2d2d2d;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.meal-plan-card:hover,
+.shopping-item:hover,
+.progress-entry:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 152, 0, 0.2);
+}
+
+.meal-plan-card h3,
+.shopping-item h3,
+.progress-entry h3 {
+    color: #ffb300;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.meal-plan-card h4,
+.meal-plan-card p,
+.shopping-item p,
+.progress-entry p {
+    color: #ccc;
+}
+
+/* Features Section (New) */
+.features-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.features-section h2 {
+    color: #ffb300;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.features-section p {
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background-color: #2d2d2d;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 152, 0, 0.2);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: #ffb300;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    color: #ffb300;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.feature-card p {
+    color: #ccc;
+    font-size: 1rem;
+}
+
+/* Why NutriLift Section (Updated) */
+.why-nutrilift {
+    padding: 4rem 0;
+    background-color: #252525;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+.why-nutrilift h2 {
+    color: #ffb300;
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.why-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.why-text {
+    flex: 1;
+}
+
+.why-text p {
+    color: #ccc;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.why-image {
+    flex: 1;
+}
+
+.why-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .why-content {
+        flex-direction: column;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #2d2d2d;
+    color: #ccc;
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid #ffb300;
+}
